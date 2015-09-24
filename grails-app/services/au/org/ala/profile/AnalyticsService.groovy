@@ -100,7 +100,7 @@ class AnalyticsService {
 
         def opusId = profile.opus.shortName ?: profile.opus.uuid
 
-        def profileUri = "${grailsApplication.config.contextPath ?: ''}/opus/${opusId}/profile/${profile.fullName}"
+        def profileUri = "${grailsApplication.config.contextPath ?: ''}/opus/${opusId}/profile/${profile.scientificName}"
 
         // Query Google Analytics for ga:sessions and ga:pageviews...
         ret.allTime = queryForViews(profileUri, ALL_TIME)
